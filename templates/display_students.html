@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <center>
+        <h1>Displaying_student details</h1>
+        <table border="4px">
+            <tr>
+                <th>Name</th>
+                <th>age</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Address</th>
+                <th>Gender</th>
+                <th>Courses</th>
+            </tr>
+            {% for i in FO %}
+            <tr>
+                <td>{{i.name}}</td>
+                <td>{{i.age}}</td>
+                <td>{{i.email}}</td>
+                <td>{{i.password}}</td>
+                <td>{{i.address}}</td>
+                <td>{{i.gender}}</td>
+                <td>{{i.course}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </center>
+</body>
+</html>

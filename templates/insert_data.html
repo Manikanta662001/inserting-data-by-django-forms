@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}">
+</head>
+<body>
+    <center>
+        <h1>Inserting data by Django_forms</h1>
+
+        <form method="POST">
+            {% csrf_token %}
+
+            {{form.as_p}}
+
+        <input type="submit" value="Submit" >
+        </form>
+    </center>
+</body>
+</html>
